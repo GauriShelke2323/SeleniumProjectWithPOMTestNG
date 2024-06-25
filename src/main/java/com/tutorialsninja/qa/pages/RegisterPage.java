@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage {
-	WebDriver driver;
+	 WebDriver driver;
 	
 	public RegisterPage(WebDriver driver) {
 		this.driver=driver;

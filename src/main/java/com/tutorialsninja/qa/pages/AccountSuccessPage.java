@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccountSuccessPage {
 
-WebDriver driver;
+	 WebDriver driver;
 	
 	public AccountSuccessPage(WebDriver driver) {
 		this.driver=driver;

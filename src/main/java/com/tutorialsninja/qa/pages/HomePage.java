@@ -1,13 +1,12 @@
 package com.tutorialsninja.qa.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	WebDriver driver;
+	 WebDriver driver;
 	
 	//objects location
 	@FindBy(xpath="//span[text()='My Account']")
@@ -36,12 +35,16 @@ public class HomePage {
 		MyAccountDropMenu.click();
 	}
 	
-	public void selectLoginOption() {
+	//removed login page object declartion from login.java to reduce the 
+	//code in login.java and here returned the object
+	public LoginPage selectLoginOption() {
 		Login.click();
+		return new LoginPage(driver);
 	}
 	
-	public void selectRegisterOption() {
+	public RegisterPage selectRegisterOption() {
 		Registerbtn.click();
+		return new RegisterPage(driver);
 	}
 
 	public void enterSearchText(String searchitem) {
